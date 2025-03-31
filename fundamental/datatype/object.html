@@ -1,0 +1,44 @@
+<html>
+	<body></body>
+		<script>			
+		// Person object
+		const person = {
+			fullName: "Kukuh Prihastomo",
+			age: 28,
+			showData: function(newData) {
+				if (newData) {
+					return (this.fullName + "<br/ >" + this.age.toString() + "<br />" + newData).toUpperCase();
+				} else {
+					return (this.fullName + "<br/ >" + this.age.toString() + "<br />").toUpperCase();
+				}
+			},
+		}
+		document.body.innerHTML += person.showData() + "<br />";
+
+		// Assigning a new property and method
+		person.addData = function() {
+			return person.job = "entrepreneur";
+		}
+		
+        document.body.innerHTML += person.showData(person.addData()) + "<br />";
+		
+		// Deleting an Object Key
+		function deleteData(propKey) {
+			if (Object.hasOwn(person, propKey)) {
+				delete person[propKey];
+				document.body.innerHTML += "<br />" + person.showData() + "<br/>";
+			} else {
+				alert("Property tidak ditemukan");
+			}
+		}
+		
+		document.body.innerHTML += "<button onclick=deleteData('job')>Remove Data</button><br />";
+
+		// Object iterable
+		const car = {0: "BYD", 1: 1000, 2: "China"}
+		for(let i of Object.values(car)) {
+            document.body.innerHTML += "<br />" + i + " ";
+		}
+		
+		</script>	
+</htmlA>

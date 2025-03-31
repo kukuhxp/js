@@ -1,0 +1,13 @@
+<html>
+	<body></body>
+	<script>
+		const a = null;
+		const b = undefined;
+		document.body.innerHTML += Boolean(a == b) + "<br />";
+		document.body.innerHTML += Boolean(a === b) + "<br />";
+		document.body.innerHTML += Boolean(a == 0) + "<br />";
+		document.body.innerHTML += Boolean(a == "") + "<br />";
+		document.body.innerHTML += Boolean(b == 0) + "<br />";
+		document.body.innerHTML += Boolean(b == "") + "<br />";
+	</script>	
+</html>

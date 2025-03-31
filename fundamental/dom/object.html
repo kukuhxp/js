@@ -1,0 +1,23 @@
+<html>
+	<body>
+		<div>
+           <p>Text<b>JavaScript</b></p>
+           <p>Text<b>Some text</b></p>
+        </div>
+	</body>
+	<script>
+		const elem1 = document.getElementsByTagName("p")[0].childNodes;
+	    let out1 = "";
+	    for(let i = 0; i < elem1.length; i++) {
+	        out1 += elem1[i].nodeName + " ";
+	    }
+	    document.body.innerHTML += out1 + "<br />";
+      
+        const elem2 = document.querySelectorAll("p");
+	    let out2 = "";
+	    for(let i of elem2) {
+	        out2 += i.nodeName + " ";
+	    }
+	    document.body.innerHTML += out2 + "<br />";
+      </script>
+</html>

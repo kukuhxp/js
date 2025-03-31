@@ -1,0 +1,17 @@
+<html>
+	<body></body>
+	<script>
+	const arr = [
+		"Some string",
+		10,
+		document.cookie,
+		document.domain,
+		document.URL,
+		document.title,
+		document.body,
+	];
+	for (let i = 0; i < arr.length; i++) {
+		document.body.innerHTML += arr[i].valueOf() + "<br />";
+	}
+	</script>	
+</html>
