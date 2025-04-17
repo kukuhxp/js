@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Strings</title>
+</head>
+	<body></body>
+	<script>
+
+function br(times = 1) {
+    const frag = document.createDocumentFragment();
+    for (let i = 0; i < times; i++) {
+        frag.appendChild(document.createElement("br"));
+    }
+        return frag;
+}
+
+function print(tag, txt) {
+    const body = document.body;
+    const element = document.createElement(tag);
+    const text = document.createTextNode(txt);
+    element.append(text);
+    // body.append(element.append(text));
+    // body.append(undefined)
+    body.append(element);
+    return body;
+}
+
+print("h3", "CONCATENATION");
+print("p", `"2" + "a" = ${"2" + "a"}`);
+print("p", `"2" - "a" = ${"2" - "a"}`);
+print("p", `"2" * "a" = ${"2" * "a"}`);
+print("p", `"2" / "a" = ${"2" / "a"}`);
+print("p", `"2" + "2" = ${"2" + "2"}`);
+print("p", `"2" - "2" = ${"2" - "2"}`);
+print("p", `"2" * "2" = ${"2" * "2"}`);
+print("p", `"2" / "2" = ${"2" / "2"}`);
+print("p", `"2" + 2 = "2" + 2`);
+print("p", `"2" - 2 = "2" - 2`);
+print("p", `"2" * 2 = "2" * 2`);
+print("p", `"2" / 2 = "2" / 2`);
+
+print("h3", "CONCAT METHOD");
+let a = "Hello";
+let b = 5;
+let c = a.concat(b);
+let strTemplate = `Ini adalah contoh template literal
+dan tidak terpengaruh dengan multiple line.`;
+
+const arr = [
+  "A = 'Hello'",
+  "B = 5",
+  "C = A.concat(B)",
+  "C = " + a.concat(b),
+];
+
+for(let i of arr) {
+  print("p", i);
+}
+
+print("h3", "TEMPLATE LITERAL BACKTICK (\` \`)");
+print("p", "Template literal berfungsi untuk menampilkan data string tanpa menggunakan escape characters, selain itu template literal dapat mendukung multiple line. Contoh:");
+print("pre", strTemplate);
+
+print("h3", "INTERPOLATION IN TEMPLATE LITERAL");
+print("p", "Interpolation adalah cara menyisipkan nilai variabel atau ekspresi ke sebuah template literal");
+print("pre", `\`A + B = \${A + B} \// Output: ${a+b}\``);
+	</script>
+</html>

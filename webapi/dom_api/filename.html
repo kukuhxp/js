@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Getting The File Name</title>
+</head>
+    <body></body>
+    <script>
+        // Using split() method
+        const fileName = window.location.pathname.split('/').pop();
+        document.body.innerHTML += fileName + "<br />";
+        
+        // Using substring() method
+        const path = window.location.pathname;
+        const fileName2 = path.substring(path.lastIndexOf('/') + 1);
+        document.body.innerHTML += fileName2 + "<br />";
+    </script>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>JavaScript Core Objects</title>
+</head>
+	<body id="dom">
+	    <p>JavaScript</p>
+	    <p>Some text</p>
+	</body>
+	<script>
+
+function print(tag, txt) {
+    const body = document.body;
+    const element = document.createElement(tag);
+    const text = document.createTextNode(txt);
+    element.append(text);
+    body.append(element);
+    return body;
+}
+
+function br(times = 1) {
+    const frag = document.createDocumentFragment();
+    for (let i = 0; i < times; i++) {
+        frag.appendChild(document.createElement("br"));
+    }
+    return frag;
+}
+
+print("h3", "JAVASCRIPT OBJECTS");
+
+	const js = [
+    ["String", "Some text"],
+    ["Number",10],
+    ["Boolean", true],
+    ["Boolean", false],
+    ["Null", null],
+    ["Undefinied", undefined],
+    ["Math", Math],
+    ["Date", Date],
+    ["Date()", Date()],
+    ["new Date()", new Date()],
+    ["RegExp", RegExp],
+    ["RegExp()", RegExp()],
+    ["new RegExp()", new RegExp()],
+    ["String", String],
+    ["String(\"JavaScript\")", String("JavaScript")],
+    ["new String(\"JavaScript\")", new String("JavaScript")],
+    ["Number", Number],
+    ["Number(100)", Number(100)],
+    ["new Number(100)", new Number(100)],
+    ["Boolean", Boolean],
+    ["Boolean(1)", Boolean(1)],
+    ["new Boolean(1)", new String(1)],
+	];
+
+for (let [label, val] of js) {
+    print("p", `${label} → type: ${typeof val} → value: ${val}`);
+}
+
+	</script>	
+</html>

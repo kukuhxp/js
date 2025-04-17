@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>Strings Instance Methods</title>
+</head>
+	<body></body>
+	<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+
+    function br(times = 1) {
+        const frag = document.createDocumentFragment();
+        for (let i = 0; i < times; i++) {
+            frag.appendChild(document.createElement("br"));
+        }
+        body.append(frag);
+    }
+  
+    function print(tag, txt) {
+        const body = document.body;
+        // If tag == falsy
+        if(!tag) {
+            body.append(txt);
+            return body;
+        }
+        const element = document.createElement(tag);
+        const text = document.createTextNode(txt);
+        element.append(text);
+        // body.append(element.append(text));
+        // body.append(undefined)
+        body.append(element);
+        return body;
+    }
+      
+    const str = "It's very nice day";
+    const strRev = Object.values(str).reverse();
+    const txt = "JavaScript";
+    const txtRev = Object.values(txt).reverse();
+    let par = "";
+      
+    print("h3", "JAVASCRIPT STRING OBJECT");
+    print("p", `str: ${str}`);
+      
+    for(let i in str) {
+        print("", `[${i}]: ${str[i]}`);
+        if(i < str.length -1) print("", ", ");
+            if(i == str.length -1) br();
+    }
+      
+    for(let i in strRev) {
+        print("", `[${-1 -Number(i)}]: ${strRev[i]}`);
+        if(i < strRev.length -1) print("", ", ");
+            if(i == strRev.length -1) br();
+    }
+    
+    print("p", `txt: ${txt}`);
+      
+    for(let i in txt) {
+        print("", `[${i}]: ${txt[i]}`);
+        if(i < txt.length -1) print("", ", ");
+            if(i == txt.length -1) br();
+    }
+      
+    for(let i in txtRev) {
+        print("", `[${-1 -Number(i)}] ${txtRev[i]}`);
+        if(i < txtRev.length -1) print("", ", ");
+            if(i == txtRev.length -1) br();
+    }
+    
+    let arrStr = [
+    "str.slice(5): " + str.slice(5),
+    "str.slice(-8, -4): " + str.slice(-8, -4),
+    "str.slice(2, -4): " + str.slice(2, -4),
+    "str.slice(2, -4): " + str.slice(2, -4),
+    "txt.slice(0, 4): " + txt.slice(0, 4),
+    "txt.slice(0, 4): " + txt.slice(0, 4),
+    "txt.substring(-5, 4): " + txt.substring(-5, 4),
+    "txt.substring(-5, -6): " + txt.substring(-5, -6),
+    "txt.substring(3, -5): " + txt.substring(3, -5),
+    "txt.substring(5, 1): " + txt.substring(5, 1),
+    ]
+    
+    print("h3", "STRING INSTANCE METHODS");
+    for(let i of arrStr) {
+        print("p", `${i}`);
+    }
+    
+    /* Substring Explanation
+    If the one of index is negative it becomes 0 index
+    string.substring(-5, 3); the return is \"Java\"
+    
+    If the end index is negative, it swapped to start index
+    (3, -5) equivalent to (0, 3)
+    string.substring(3, -5); the return is "Jav"
+    
+    If the start index > end index, the stringg is reversed
+    string.substring(5, 1); the return is \"avaS\"
+    string.substring(-5, -6); the return is \"\"
+    */
+});
+	</script>
+</html>
