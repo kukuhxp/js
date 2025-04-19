@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="styles/style.css"/>
+    <title>Function</title>
+    <link href="../_css/style.css" rel="stylesheet"/>
+</head>
+<body></body>
+<script src="../_libs/script.js"></script>
+<script>
+print("h3", "SYNTAX");
+print("p", "function name(parameters) { }");
+print("p", "name = function (parameters) { }");
+
+print("h3", "DECLARATION 1");
+print("pre", `
+function add(a, b) {
+    let c = a + b;
+    return c;
+}`);
+
+function add(a, b) {
+    let c = a + b;
+    return c;
+};
+
+print("h3", "DECLARATION 2");
+print("pre", `
+sub = function (a, b) {
+    let c = a - b;
+    return c;
+}`);
+
+function sub(a, b) {
+    let c = a - b;
+    return c;
+};
+
+print("h3", "INVOCATION");
+print("p", `add(10, 2): ${add(10, 2)}`);
+print("p", `sub(24, 17): ${sub(24, 17)}`);
+
+
+print("h3", "FUNCTION AS VALUE");
+print("p", `x = add(33, 18): ${add(33, 18)}`);
+let x = add(33, 18);
+print("p", `100 + x = ${100 + x}`);
+</script>
+</html>

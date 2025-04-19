@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>// Object iterable
+		const car = {0: "BYD", 1: 1000, 2: "China"}
+		for(let i of Object.values(car)) {
+		    document.body.innerHTML += "<br />" + i + " ";
+		}

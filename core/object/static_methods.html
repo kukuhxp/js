@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Object Static Methods</title>
+    <link href="../_css/style.css" rel="stylesheet" />
+</head>
+<body></body>
+<script src="../_libs/script.js"></script>
+<script>
+print("h3", "OBJECT STATIC METHODS");
+
+const fruits = {Bananas: 300, Grapes: 400, Melon: 500}
+const staticMethods = [
+  Object.entries(fruits),
+  Object.values(fruits),
+];
+
+print("p", "Fruits = {Bananas: 300, Grapes: 400, Melon: 500}");
+print("span", "Object.entries(fruits): ");
+for(let [fruit, amount] of staticMethods[0]) {
+  print("span", `${fruit}: ${amount}, `);
+}
+  
+for(let i = 1; i < staticMethods.length; i++) {
+  print("p", `Object.values(fruits): ${staticMethods[i]}`);
+}
+</script>
+		</html>

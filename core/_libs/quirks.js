@@ -18,3 +18,6 @@ console.log("7. true + true =", true + true); // 2
 // 6. Campuran string + angka
 console.log("8. 1 + '2' + 3 =", 1 + "2" + 3); // "123"
 console.log("9. 1 + 2 + '3' =", 1 + 2 + "3"); // "33"
+
+// 7. null >= 0
+console.log("10. null >= 0 =", null >= 0); // true

@@ -1,28 +1,26 @@
 <html>
 <head>
     <title>Strings</title>
+    <link href="../_css/style.css" rel="stylesheet" />
 </head>
 	<body></body>
+<script src="../_libs/script.js"></script>
 	<script>
+const single = "'Single quote'";
+const double = '"Double quote"';
+const tag = "<p>This is a paragraph</p>"
 
-function br(times = 1) {
-    const frag = document.createDocumentFragment();
-    for (let i = 0; i < times; i++) {
-        frag.appendChild(document.createElement("br"));
-    }
-        return frag;
-}
+print("h3", "SYNTAX");
+print("p", "new String(); // Object type");
+print("p", 'variable = "value"; // Primitive type');
 
-function print(tag, txt) {
-    const body = document.body;
-    const element = document.createElement(tag);
-    const text = document.createTextNode(txt);
-    element.append(text);
-    // body.append(element.append(text));
-    // body.append(undefined)
-    body.append(element);
-    return body;
-}
+print("h3", "STRING LITERAL");
+print("p", "single = 'Single quote'");
+print("p", `${single}`);
+print("p", `double = "Double quote"`);
+print("p", `${double}`);
+print("p", 'tag = "<p>This is a paragraph</p>"');
+body.innerHTML += tag;
 
 print("h3", "CONCATENATION");
 print("p", `"2" + "a" = ${"2" + "a"}`);
@@ -56,11 +54,11 @@ for(let i of arr) {
   print("p", i);
 }
 
-print("h3", "TEMPLATE LITERAL BACKTICK (\` \`)");
+print("h3", "TEMPLATE LITERAL");
 print("p", "Template literal berfungsi untuk menampilkan data string tanpa menggunakan escape characters, selain itu template literal dapat mendukung multiple line. Contoh:");
 print("pre", strTemplate);
 
-print("h3", "INTERPOLATION IN TEMPLATE LITERAL");
+print("h3", "INTERPOLATION");
 print("p", "Interpolation adalah cara menyisipkan nilai variabel atau ekspresi ke sebuah template literal");
 print("pre", `\`A + B = \${A + B} \// Output: ${a+b}\``);
 	</script>

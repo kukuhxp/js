@@ -1,72 +1,26 @@
 <html>
 <head>
     <title>Strings Instance Methods</title>
+    <link href="../_css/style.css" rel="stylesheet" />
 </head>
 	<body></body>
+<script src="../_libs/script.js"></script>
 	<script>
 document.addEventListener("DOMContentLoaded", () => {
-    const body = document.body;
-
-    function br(times = 1) {
-        const frag = document.createDocumentFragment();
-        for (let i = 0; i < times; i++) {
-            frag.appendChild(document.createElement("br"));
-        }
-        body.append(frag);
-    }
-  
-    function print(tag, txt) {
-        const body = document.body;
-        // If tag == falsy
-        if(!tag) {
-            body.append(txt);
-            return body;
-        }
-        const element = document.createElement(tag);
-        const text = document.createTextNode(txt);
-        element.append(text);
-        // body.append(element.append(text));
-        // body.append(undefined)
-        body.append(element);
-        return body;
-    }
-      
+    print("h3", "PROTOTYPE OBJECT");
+    print("p", "String.prototype");
+    
+    print("h3", "STRING EXTRACTING");
     const str = "It's very nice day";
     const strRev = Object.values(str).reverse();
     const txt = "JavaScript";
     const txtRev = Object.values(txt).reverse();
-    let par = "";
-      
-    print("h3", "JAVASCRIPT STRING OBJECT");
-    print("p", `str: ${str}`);
-      
-    for(let i in str) {
-        print("", `[${i}]: ${str[i]}`);
-        if(i < str.length -1) print("", ", ");
-            if(i == str.length -1) br();
-    }
-      
-    for(let i in strRev) {
-        print("", `[${-1 -Number(i)}]: ${strRev[i]}`);
-        if(i < strRev.length -1) print("", ", ");
-            if(i == strRev.length -1) br();
-    }
-    
-    print("p", `txt: ${txt}`);
-      
-    for(let i in txt) {
-        print("", `[${i}]: ${txt[i]}`);
-        if(i < txt.length -1) print("", ", ");
-            if(i == txt.length -1) br();
-    }
-      
-    for(let i in txtRev) {
-        print("", `[${-1 -Number(i)}] ${txtRev[i]}`);
-        if(i < txtRev.length -1) print("", ", ");
-            if(i == txtRev.length -1) br();
-    }
-    
-    let arrStr = [
+    const text = "  Some Text   ";
+    const list = "Apple, Orange, Grape, Banana";
+    const listArr = list.split(",");
+    const word = "day of the day";
+    const words = "The rain in SPAIN stays mainly in the plain";
+    let instanceMethods = [
     "str.slice(5): " + str.slice(5),
     "str.slice(-8, -4): " + str.slice(-8, -4),
     "str.slice(2, -4): " + str.slice(2, -4),
@@ -77,25 +31,95 @@ document.addEventListener("DOMContentLoaded", () => {
     "txt.substring(-5, -6): " + txt.substring(-5, -6),
     "txt.substring(3, -5): " + txt.substring(3, -5),
     "txt.substring(5, 1): " + txt.substring(5, 1),
-    ]
-    
-    print("h3", "STRING INSTANCE METHODS");
-    for(let i of arrStr) {
-        print("p", `${i}`);
-    }
+    "text.trim(): " + text.trim().length,
+    "text.repeat(3): " + text.repeat(3),
+    'text.replace("Some", "Replaced"): ' + text.replace("Some", "Replaced"),
+    'list.split(","): ' + list.split(","),
+    'word.indexOf("day"): ' + word.indexOf("day"),
+    'word.indexOf("Day"): ' + word.indexOf("Day"),
+    'word.lastIndexOf("day"): ' + word.lastIndexOf("day"),
+    'word.search(/day/): ' + word.search(/day/),
+    'words.match("ain"): ' + words.match("ain"),
+    'words.match(/ain/): ' + words.match(/ain/),
+    'words.match(/ain/g): ' + words.match(/ain/g),
+    'words.match(/ain/gi): ' + words.match(/ain/gi),
+    'words.includes("rain"): ' + words.includes("rain"),
+    'words.startsWith("The"): ' + words.startsWith("The"),
+    'words.endsWith("the"): ' + words.startsWith("the"),
+    ];
     
     /* Substring Explanation
-    If the one of index is negative it becomes 0 index
-    string.substring(-5, 3); the return is \"Java\"
+    Example:
+    string.substring(-5, 3);
+    * The return is \"Java\"
+    * If the one of index is negative, the index becomes zero (0)
+    * If the end index is negative, it swapped to start index
     
-    If the end index is negative, it swapped to start index
-    (3, -5) equivalent to (0, 3)
-    string.substring(3, -5); the return is "Jav"
-    
-    If the start index > end index, the stringg is reversed
-    string.substring(5, 1); the return is \"avaS\"
-    string.substring(-5, -6); the return is \"\"
+    string.substring(3, -5);
+    * The return is "Jav"
+    * If the start index > end index, the stringg is reversed
+    * (3, -5) equivalent to (0, 3)
     */
+    
+    /* Replace Explanation
+    Example:
+    text.replace("Some", "Replaced");
+    * To avoid case sensitive of replace() method use the RegEx flag.
+    
+    text.replace(/SOME/i, "Replaced");
+    * Use the insensitve flag
+    
+    text.replace(/some/g, "Replaced");
+    * Use the global match fkag
+    */
+    
+    print("p", `str: ${str}`);
+    for(let i in str) {
+        print("", `[${i}]: ${str[i]}`);
+        if(i < str.length -1) print("", ", ");
+            if(i == str.length -1) br();
+    }
+    for(let i in strRev) {
+        print("", `[${-1 -Number(i)}]: ${strRev[i]}`);
+        if(i < strRev.length -1) print("", ", ");
+            if(i == strRev.length -1) br();
+    }
+    
+    print("p", `txt: ${txt}`);
+    for(let i in txt) {
+        print("", `[${i}]: ${txt[i]}`);
+        if(i < txt.length -1) print("", ", ");
+            if(i == txt.length -1) br();
+    }
+    for(let i in txtRev) {
+        print("", `[${-1 -Number(i)}] ${txtRev[i]}`);
+        if(i < txtRev.length -1) print("", ", ");
+            if(i == txtRev.length -1) br();
+    }
+    
+    print("p", 'text: "     Some Text     "');
+    print("p", `list: ${list}`);
+    for(let i = 0; i < 14; i++) {
+        print("p", `${instanceMethods[i]}`);
+    }
+    for(let i in listArr) {
+        print("span", `[${i}]: ${listArr[i]}`);
+        if(i < listArr.length -1) print("", ", ");
+            if(i == listArr.length -1) br();
+    }
+        
+    print("h3", "STRING EXTRACTING");
+    print("p", `word: ${word}`);
+        for(let i in word) {
+        print("", `[${i}]: ${word[i]}`);
+        if(i < word.length -1) print("", ", ");
+            if(i == word.length -1) br();
+    }
+    
+    print("p", `words: ${words}`);   
+    for(let i = 14; i < instanceMethods.length; i++) {
+        print("p", `${instanceMethods[i]}`);
+    }
 });
 	</script>
 </html>

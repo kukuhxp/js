@@ -1,0 +1,12 @@
+body {
+  font-family: monospace;
+  line-height: 1.5;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+
+pre {
+  margin-top: -15px;
+  font-size: 15px;
+}
