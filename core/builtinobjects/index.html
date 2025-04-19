@@ -1,32 +1,15 @@
 <html>
 <head>
-    <title>JavaScript Core Objects</title>
+    <title>JavaScript Built-in Objects</title>
+    <link href="../_css/style.css" rel="stylesheet" />
 </head>
 	<body id="dom">
+	    <h3>JavaScript Built-in Objects</h3>
 	    <p>JavaScript</p>
 	    <p>Some text</p>
 	</body>
+<script src="../_libs/script.js"></script>
 	<script>
-
-function print(tag, txt) {
-    const body = document.body;
-    const element = document.createElement(tag);
-    const text = document.createTextNode(txt);
-    element.append(text);
-    body.append(element);
-    return body;
-}
-
-function br(times = 1) {
-    const frag = document.createDocumentFragment();
-    for (let i = 0; i < times; i++) {
-        frag.appendChild(document.createElement("br"));
-    }
-    return frag;
-}
-
-print("h3", "JAVASCRIPT OBJECTS");
-
 	const js = [
     ["String", "Some text"],
     ["Number",10],

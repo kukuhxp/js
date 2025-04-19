@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Constructor</title>
+    <link href="../_css/style.css" rel="stylesheet"/>
+</head>
+<body></body>
+<script src="../_libs/script.js"></script>
+<script>
+print("h3", "SYNTAX");
+print("p", "function Name(key, value) {this[key] = value;} // Creating a constructor");
+print("p", "variable = new Name(value); // Creating an instance object");
+
+print("h3", "DECLARATION");
+print("pre", `
+function Name(naem, age) {
+  this.name = name;
+  this.age = age;
+  this.speak = function() {
+    const greeting = "Hi, nice to meet you";
+    return greeting;
+  }
+}`);
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.speak = function() {
+    const greeting = "Hi, nice to meet you";
+    return greeting;
+  }
+}
+
+print("h3", "INSTANCE OBJECT");
+print("p", 'person = new Person("Kukuh", 28)');
+const person = new Person("Kukuh", 28);
+
+print("h3", "USING THE PROPERTY & METHOD");
+for (let key in person) {
+  if (typeof person[key] === "function") {
+    print("p", `${key}(): ${person[key]()}`);
+  } else {
+    print("p", `${key}: ${person[key]}`);
+  }
+}
+
+print("h3", "DEFAULT PROPERTY");
+print("pre", `
+function Name(race) {
+  this.nationality = "United State";
+  this.race = race;
+}
+
+people = new People("Asia");
+`);
+
+function People(race) {
+    this.nationality = "United State";
+    this.race = race;
+  }
+let people = new People("Asia");
+for(let i in people) {
+    print("p", `people.${i}: ${people[i]}`);
+}
+
+print("h3", "ADDING A PROPERTY & METHOD TO THE CONSTRUCTOR");
+print("p", `People.prototype.skin = ${People.prototype.skin = "white"}`);
+print("p", `people.skin: ${people.skin}`);
+print("pre", `
+People.prototype.greeting = function() {
+  const text = "Welcome to America";
+  return text;
+}
+`);
+People.prototype.greeting = function() {
+    const text = "Welcome to America";
+    return text;
+}
+print("p", `people.greeting(): ${people.greeting()}`);
+</script>
+</html>
