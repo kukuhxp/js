@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Condition</title>
+    <link href="../_css/style.css" rel="stylesheet"/>
+</head>
+<body></body>
+<script src="../_libs/script.js"></script>
+<script>
+print("h3", "SYNTAX");
+print("p", "if (condition) {statmeents}");
+print("p", "if (condition 1) {statmeents} else if(condition 2) {statmeents}");
+print("p", "if (condition) {statmeents} else {statmeents}");
+
+print("h3", "CHECKING YOUR AGE");
+print("pre", `
+age = prompt("Masukkan usia Anda di sini:");
+while (!age || isNaN(age) || age <= 0) {
+    age = prompt("Masukkan usia yang valid:");
+}
+if(age > 0 && age <= 12) {
+    print("p", "You're a kid");
+} else if(age > 12 && age < 18) {
+    print("p", "You're a teen");
+} else if(age >= 18) {
+    print("p", "You're an adult");  
+} else {
+  while (!age || isNaN(age) || age <= 0) {
+    age = prompt("Masukkan usia yang valid:");
+  } 
+}
+`);
+let age = prompt("Masukkan usia Anda di sini:");
+while (!age || isNaN(age) || age <= 0) {
+    age = prompt("Masukkan usia yang valid:");
+}
+if(age > 0 && age <= 12) {
+    print("p", "You're a kid");
+} else if(age > 12 && age < 18) {
+    print("p", "You're a teen");
+} else if(age >= 18) {
+    print("p", "You're an adult");  
+} else {
+    while (!age || isNaN(age) || age <= 0) {
+        age = prompt("Masukkan usia yang valid:");
+    } 
+}
+</script>
+</html>
