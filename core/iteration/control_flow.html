@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Looping Control Flow</title>
+    <link href="../_css/style.css" rel="stylesheet" />
+</head>
+<body></body>
+<script src="../_libs/script.js"></script>
+<script>
+print("h3", "SYNTAX");
+print("pre", `
+for(condition, increment/decrement) {
+    if(condition) {
+        continue;
+    }
+    if(condition) {
+        break;
+    }
+    statements;
+}
+`);
+
+print("h3", "FACT");
+print("span", "1. To skip the one of iteration you must use:");
+print("code", "(==)");
+print("code", "{continue;}");
+br();
+print("span", "2. To skip the current of iteration you must use: ");
+print("code", "(<, <=, >=, >) with &&");
+print("code", "{continue;}");
+br();
+print("span", "3. To stop the next of iteration you must use: ");
+print("code", "==");
+print("code", "{break;}");
+
+print("h3", "LOOPING CONTROL FLOW");
+print("pre", `
+for(let i = 0; i < 10; i++) {
+    if(i > 2 && i < 5) {
+        continue;
+    } else if(i == 8) {
+        break;
+    }
+    print("p", \`Looping at \${i + 1} of 10\`);
+}
+`);
+print("h3", "OUTPUT");
+for(let i = 0; i < 10; i++) {
+    if(i > 2 && i < 5) {
+        continue;
+    } else if(i == 8) {
+        break;
+    }
+    print("p", `Looping at ${i + 1} of 10`);
+}
+</script>
+		</html>

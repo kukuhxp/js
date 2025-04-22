@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     print("h3", "PROTOTYPE OBJECT");
     print("p", "String.prototype");
     
-    print("h3", "STRING EXTRACTING");
+    print("h3", "STRING EXTRACTION");
     const str = "It's very nice day";
     const strRev = Object.values(str).reverse();
     const txt = "JavaScript";
@@ -73,50 +73,53 @@ document.addEventListener("DOMContentLoaded", () => {
     * Use the global match fkag
     */
     
-    print("p", `str: ${str}`);
+    print("p", `str = ${str}`);
     for(let i in str) {
         print("", `[${i}]: ${str[i]}`);
-        if(i < str.length -1) print("", ", ");
-            if(i == str.length -1) br();
+        if(i < str.length - 1) print("", ", ");
+            if(i == str.length - 1) br();
     }
     for(let i in strRev) {
         print("", `[${-1 -Number(i)}]: ${strRev[i]}`);
         if(i < strRev.length -1) print("", ", ");
-            if(i == strRev.length -1) br();
+            if(i == strRev.length - 1) br();
     }
     
-    print("p", `txt: ${txt}`);
+    print("p", `txt = ${txt}`);
     for(let i in txt) {
         print("", `[${i}]: ${txt[i]}`);
-        if(i < txt.length -1) print("", ", ");
-            if(i == txt.length -1) br();
+        if(i < txt.length - 1) print("", ", ");
+            if(i == txt.length - 1) br();
     }
     for(let i in txtRev) {
         print("", `[${-1 -Number(i)}] ${txtRev[i]}`);
-        if(i < txtRev.length -1) print("", ", ");
-            if(i == txtRev.length -1) br();
+        if(i < txtRev.length - 1) print("", ", ");
+            if(i == txtRev.length - 1) br();
     }
     
-    print("p", 'text: "     Some Text     "');
-    print("p", `list: ${list}`);
+    print("p", 'text = "     Some Text     "');
+    print("p", `list = ${list}`);
+    
+    print("h3", "STRING EXTRACTION OUTPUTS");
     for(let i = 0; i < 14; i++) {
         print("p", `${instanceMethods[i]}`);
     }
     for(let i in listArr) {
         print("span", `[${i}]: ${listArr[i]}`);
-        if(i < listArr.length -1) print("", ", ");
-            if(i == listArr.length -1) br();
+        if(i < listArr.length - 1) print("", ", ");
+            if(i == listArr.length - 1) br();
     }
         
-    print("h3", "STRING EXTRACTING");
-    print("p", `word: ${word}`);
+    print("h3", "STRING SEARCH");
+    print("p", `word = ${word}`);
         for(let i in word) {
         print("", `[${i}]: ${word[i]}`);
-        if(i < word.length -1) print("", ", ");
-            if(i == word.length -1) br();
+        if(i < word.length - 1) print("", ", ");
+            if(i == word.length - 1) br();
     }
-    
-    print("p", `words: ${words}`);   
+    print("p", `words = ${words}`);
+        
+    print("h3", "STRING SEARCH OUTPUTS");        
     for(let i = 14; i < instanceMethods.length; i++) {
         print("p", `${instanceMethods[i]}`);
     }

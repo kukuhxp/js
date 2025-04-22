@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Switch & Break</title>
+    <link href="../_css/style.css" rel="stylesheet" />
+</head>
+<body></body>
+<script src="../_libs/script.js"></script>
+<script>
+print("h3", "SYNTAX");
+print("pre", `
+switch(object) {
+    case value:
+      statements;
+      break;
+    default:
+      statements;
+}
+`);
+
+print("h3", "CHECKING THE WEATHER");
+let weather = prompt("What's the weather today?");
+weather = weather ? weather.toLowerCase().trim() : "";
+
+switch(weather) {
+    case "cloudy":
+        print("p", "It's too cloudy...");
+        break;
+    case "rainy":
+        print("p", "It's raining today!");
+        break;
+    case "sunny":
+        print("p", "The sun is shining!");
+        break;
+    default:
+        print("p", "Unknown input or normal day!");
+}
+</script>
+		</html>

@@ -8,6 +8,29 @@
 <body></body>
 <script src="../_libs/script.js"></script>
 <script>
+print("h3", "SYNTAX");
+print("p", "let variable;");
+print("p", "variable = value;");
+print("p", "let variable = value;");
+
+print("p", "const variable = value; // Must assigned first");
+
+print("h3", "BLOCK SCOPES");
+print("pre", `
+global variable
+{
+  lexical variable
+}
+`);
+
+print("h3", "CONSTANT");
+print("p", "const a = 8;");
+print("p", "a = 10; // Error");
+print("p", "const b = [10, 9];");
+print("p", "b = [2, 5]; // Error");
+print("p", "const c = {age: 20};");
+print("p", "c = {age: 23}; // Error");
+
 print("h3", "IMPLICIT CASTING");
 print("p", `true + true = ${true + true}`);
 print("p", `false - null = ${false - null}`);
