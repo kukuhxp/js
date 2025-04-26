@@ -9,7 +9,21 @@
 <script src="../_libs/script.js"></script>
 <script>
 print("h3", "SYNTAX");
-print("p", "object = { key: value, key: value }");
+print("p", "variable = { } // Empty object literal");
+print("p", "variable = { key: value, key: value } // Object literal");
+print("p", "variable = new Object(value); // Object constructor");
+
+print("h3", "CREATING AN EMPTY OBJECT");
+print("p", "variable = { }");
+const user = { };
+
+print("h3", "ADDING A PROPERTY TO EMPTY OBJECT");
+print("p", 'user.name = "Mazzy"');
+user.name = "Mazzy";
+
+print("h3", "USING THE KEY OBJECT (EMPTY OBJECT)");
+print("p", `My name is user.name: ${user.name}`);
+
 print("h3", "CREATING AN OBJECT");
 print("pre", `
 const person = {

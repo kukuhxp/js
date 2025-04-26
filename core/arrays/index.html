@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Arrays</title>
+    <link href="../_css/style.css" rel="stylesheet"/>
+</head>
+<body></body>
+<script src="../_libs/script.js"></script>
+<script>
+print("h3", "SYNTAX");
+print("p", "variable = [ ] // An empty array literal");
+print("p", "variable = [item, item] // Array literal");
+print("p", "variable = new Array(item, item); // Array constructor");
+print("p", "variable = Array.of(numbers); // Array static method");
+print("p", 'variable = Array.from("string"); // Array static method');
+
+print("h3", "ADDING THE ITEMS TO ENPTY ARRAY");
+print("p", "gameConsole = [ ]");
+const gameConsole = [ ]
+print("p", 'gameConsole[0] = "Playstation"');
+print("p", 'gameConsole[1] = "XBOX"');
+print("p", 'gameConsole[2] = "Ninetendo Switch"');
+print("p", 'gameConsole[3] = "Steam"');
+
+gameConsole[0] = "Playstation";
+gameConsole[1] = "XBOX";
+gameConsole[2] = "Ninetendo Switch";
+gameConsole[3] = "Steam";
+
+print("p", `My game console is: ${gameConsole}`);
+
+print("h3", "CHANGING THE ITEMS");
+print("p", 'cars = ["BMW", "Porsche", "Toyota", "Mitsubishi"]');
+const cars = ["BMW", "Porsche", "Toyota", "Mitsubishi"]
+print("p", `cars[0] = "Ford"`);
+cars[0] = "Ford";
+print("p", `The car brands is: ${cars}`);
+
+print("h3", "MIXED ITEMS");
+print("p", 'bio = ["Lavenza", 20, yearOfBirth - 20]');
+const age = 20;
+const yearOfBirth = new Date().getFullYear() - age;
+const bio = ["Lavenza", age, yearOfBirth]
+print("p", `My bio: ${bio}`);
+
+print("h3", "LENGTH PROPERTY");
+print("p", `cars.length: ${cars.length}`);
+
+print("h3", "RECOGNIZING ARRAY");
+print("p", `Array.isArray(cars): ${Array.isArray(cars)}`);
+print("p", `cars instanceof Array: ${cars instanceof Array}`);
+
+print("h3", "ARRAY WITH FOR ITERATION");
+for(let i = 0; i < cars.length; i++) {
+    print("p", `cars[${i}]: ${cars[i]}`);
+}
+    
+    print("h3", "ARRAY WITH FOR...OF ITERATION");
+    for(const [index, value] of cars.entries()) {
+        print("p", `cars[${index}]: ${value}`);
+    }
+    
+    print("h3", "ARRAY WITH FOR...IN ITERATION");
+    for(let i in cars) {
+       print("p", `cars[${i}]: ${cars[i]}`); 
+    }
+    
+    print("h3", "ARRAY WITH FOREACH ITERATION");
+    cars.forEach((value, index) => {
+      print("p", `cars[${index}]: ${value}`);
+    });
+    
+    print("h3", "ARRAY OF ARRAYS");
+    const person = {
+        name: "Jack",
+        age: 28,
+        cars: [
+          {brand: "Ford", models: ["Fiesta", "Focus", "Mustang"]},
+          {brand: "BMW", models: ["M3", "X3", "X5"]},
+          {brand: "Toyota", models: ["MPV", "SUV"]}
+        ]
+    }
+    
+    for(let i in person.cars) {
+        print("p", `person.cars[${i}] `);
+        print("b", `${person.cars[i].brand}: `);
+        for(let j in person.cars[i].models) {
+            print("i", `${person.cars[i].models[j]}`);
+            if(j < person.cars[i].models.length - 1) print("span", ", ");
+        }
+    }
+</script>
+</html>
