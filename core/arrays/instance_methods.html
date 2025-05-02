@@ -19,6 +19,11 @@ for(let i in fruits) {
     if(i < fruits.length - 1) print("span", ", ");
 }
 
+let fruitsRev = [ ]
+
+const randNumber = [10, 3, 22, 120, 314, 5]
+print("p", `randNumber = ${randNumber.join(", ")}`);
+
 const number = [1, 2, 3, 4, 5, 6]
 print("p", `number = ${number.join(", ")}`);
 
@@ -53,8 +58,8 @@ const instanceMethods = [
   // Array DELETION
   `fruits.splice(0, 1): ${fruits.splice(0, 1)}`,
   `fruits: ${fruits}`,
-  `fruits.toSpliced(0, 1): ${fruits.toSpliced(0, 1)}`,
-  `fruits: ${fruits}`,
+  `fruitsRev = fruits.toSpliced(0, 1): ${fruitsRev = fruits.toSpliced(0, 1)}`,
+  `fruitsR: ${fruitsRev}`,
   `fruits.slice(0, 5): ${fruits.slice(0, 5)}`,
   `fruits.pop(): ${fruits.pop()}`,
   `fruits: ${fruits}`,
@@ -69,7 +74,23 @@ const instanceMethods = [
   `japanCars.concat(germanCars, italyCars): ${japanCars.concat(germanCars, italyCars)}`,
   `numbers.flat(): ${numbers.flat()}`,
   `numbers.flatMap(); ${number.flatMap(num => [num, num * 100])}`,
+  // ARRAY SEARXH
+  `fruits.indexOf("Avocado"): ${fruits.indexOf("Avocado")}`,
+  `fruits.lastIndexOf("Avocado"): ${fruits.lastIndexOf("Avocado")}`,
+  `fruits.includes("Manggo"): ${fruits.includes("Manggo")}`,
+  `number.find((number) => number > 2): ${number.find((number) => number > 2)}`,
+  `number.findIndex((number) => number > 2): ${number.findIndex((number) => number > 2)}`,
+  `number.findLast((number) => number > 2): ${number.findLast((number) => number > 2)}`,
+  `number.findLastIndex((number) => number > 2): ${number.findLastIndex((number) => number > 2)}`,
+  // ARRAY SORT
+  `fruits.sort(): ${fruits.sort()}`,
+  `randNumber.sort(): ${randNumber.sort((a, b) => a - b)}`,
+  `fruits.reverse(): ${fruits.reverse()}`,
+  `randNumber.reverse(): ${randNumber.reverse((a, b) => a - b)}`,
+  `fruitsRev = fruits.toSorted(): ${fruitsRev = fruits.toSorted()}`,
+  `fruitsRev = fruits.toReversed(): ${fruitsRev = fruits.toReversed()}`,
 ]
+
 
   /*  COMMENTS BLOCK
    *  array.copyWithin(target, start, end)
@@ -85,15 +106,13 @@ print("p", `Instance methods count: ${instanceMethods.length}`);
 
 for(let i in instanceMethods) {
     if(i == 0) print("h3", "ARRAY EXTRACTION");
-    if(i < 2) print("p", `${instanceMethods[i]}`);
     if(i == 2) print("h3", "ARRAY ADDITION");
-    if(i > 1 && i < 13) print("p", `${instanceMethods[i]}`);
-    if(i == 12) print("h3", "ARRAY DELETION");
-    if(i > 12 && i < 25) print("p", `${instanceMethods[i]}`);
-    if(i == 24) print("h3", "ARRAY DUPLICATION");
-    if(i > 24 && i < 26) print("p", `${instanceMethods[i]}`);
-    if(i == 25) print("h3", "ARRAY CONCATENATION");
-    if(i > 25) print("p", `${instanceMethods[i]}`);
+    if(i == 13  ) print("h3", "ARRAY DELETION");
+    if(i == 25) print("h3", "ARRAY DUPLICATION");
+    if(i == 26) print("h3", "ARRAY CONCATENATION");
+    if(i == 29) print("h3", "ARRAY SEARCH");
+    if(i == 36) print("h3", "ARRAY SORT");
+    print("p", `${instanceMethods[i]}`);
 }
 </script>
 </html>
