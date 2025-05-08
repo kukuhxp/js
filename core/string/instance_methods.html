@@ -95,29 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
     'words.endsWith("the"): ' + words.endsWith("the"),
     ];
     
-    /*  COMMENTS BLOCK
-     *  substring() Method
-     *  string.substring(-5, 3);
-     *  The return is \"Java\"
-     *  If the one of index is negative, the index becomes zero (0)
-     *  If the end index is negative, it swapped to start index
-     *
-     *  string.substring(3, -5);
-     *  The return is "Jav"
-     *  If the start index > end index, the stringg is reversed
-     *  (3, -5) equivalent to (0, 3)
-     *
-     *  replace() Method
-     *  text.replace("Some", "Replaced");
-     *  To avoid case sensitive of replace() method use the RegEx flag.
-     *
-     *  text.replace(/SOME/i, "Replaced");
-     *  Using the insensitve flag
-     *
-     *  text.replace(/some/g, "Replaced");
-     *  Using the global match fkag
-     */
-    
     for(let i in instanceMethods) {
         if(i == 0) print("h3", "STRING EXTRACTION");
         if(i > 0 && i < 14) print("p", `${instanceMethods[i]}`);
