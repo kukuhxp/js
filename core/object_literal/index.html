@@ -4,24 +4,26 @@
     <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
     <title>Objects</title>
     <link href="../_css/style.css" rel="stylesheet" />
+    <style>
+      body {padding-bottom: 50px}
+    </style>
 </head>
 <body></body>
 <script src="../_libs/script.js"></script>
 <script>
-print("h3", "SYNTAX");
-print("p", "variable = { } // Empty object literal");
-print("p", "variable = { key: value, key: value } // Object literal");
-print("p", "variable = new Object(value); // Object constructor");
+print("h3", "OBJECT LITERAL DECLARATION SYNTAX");
+print("p", "variable = { key: value, key: value }");
 
-print("h3", "CREATING AN EMPTY OBJECT");
-print("p", "variable = { }");
+print("h3", "OBJECT CONSTRUCTOR DECLARATION SYNTAX");
+print("p", "variable = new Object(value);");
+
+print("h3", "CREATING AN EMPTY OBJECT & SET THE PROPERTY");
+print("p", "user = { }");
 const user = { };
 
-print("h3", "ADDING A PROPERTY TO EMPTY OBJECT");
-print("p", 'user.name = "Mazzy"');
+print("p", 'user.name = "Mazzy";');
 user.name = "Mazzy";
 
-print("h3", "USING THE KEY OBJECT (EMPTY OBJECT)");
 print("p", `My name is user.name: ${user.name}`);
 
 print("h3", "CREATING AN OBJECT");
@@ -48,6 +50,35 @@ print("h3", "USING THE KEY OBJECT");
 print("p", `person.fullName: ${person.fullName}`);
 print("p", `person.age: ${person.age}`);
 
+print("h3", "LOOPING THE KEY VALUES");
+for(let i in person) {
+    print("p", `${person[i]}`);
+}
+
+print("h3", "this KEYWORD");
+print("p", "Operator this pada object merupakan cara mengakses property atau method milik object.");
+print("pre", `
+account = {
+    income: 1000,
+    outcome: null,
+    checkBalance: function() {
+        let balance = this.income - this.outcome;
+        return balance;
+    }
+}
+`);
+const account = {
+    income: 1000,
+    outcome: null,
+    checkBalance: function() {
+        let balance = this.income - this.outcome;
+        return balance;
+    }
+}
+print("p", `account.income = ${account.income}`);
+print("p", `account.outcome = ${account.outcome = 200}`);
+print("p", `account.checkBalance(): ${account.checkBalance()}`);
+
 print("h3", "ADDING THE KEY OBJECT");
 
 person.addData = function() {
@@ -71,34 +102,5 @@ function deleteData(propKey) {
 
 print("button", "Remove Data");
 document.getElementsByTagName("button")[0].onclick = () => deleteData("job");
-
-print("h3", "LOOPING THE KEY VALUES");
-for(let i in person) {
-    print("p", `${person[i]}`);
-}
-
-print("h3", "this");
-print("p", "Operator this pada object merupakan cara mengakses property atau method milik object.");
-print("pre", `
-account = {
-    income: 1000,
-    outcome: null,
-    checkBalance: function() {
-        let balance = this.income - this.outcome;
-        return balance;
-    }
-}
-`);
-const account = {
-    income: 1000,
-    outcome: null,
-    checkBalance: function() {
-        let balance = this.income - this.outcome;
-        return balance;
-    }
-}
-print("p", `account.income = ${account.income}`);
-print("p", `account.outcome = ${account.outcome = 200}`);
-print("p", `account.checkBalance(): ${account.checkBalance()}`);
 </script>
 		</html>

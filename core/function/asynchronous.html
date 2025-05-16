@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Asynchronous</title>
+    <link href="../_css/style.css" rel="stylesheet"/>
+</head>
+<body></body>
+<script src="../_libs/script.js"></script>
+<script>
+print("h3", "ASYNC FUNCTION");
+async function processing() {
+  print("p", "1. Start");
+
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  
+  print("p", "3. FINISH!");
+}
+
+processing();
+print("p", "2. Running...");
+
+print("h3", "ASYNCHRONOUS FUNCTION");
+print("p", "Ready");
+setTimeout(function() {
+    print("p", "Processing...");
+}, 2000);
+print("p", "Complete!");
+</script>
+</html>

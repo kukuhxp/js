@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Target</title>
+    <link href="_css/style.css" rel="stylesheet" />
+    <style>
+      pre {margin-left: -20px;}
+    </style>
+</head>
+	<body></body>
+<script src="_libs/script.js"></script>
+<body>
+    <h3>EVENT TARGET IN HTML ATTRIBUTES SYNTAX</h3>
+    <p>&lt;tag event="function()"&gt;</p>
+    <h3>EXAMPLE</h3>
+    <p>&lt;button onclick="alert('This is a JavaScript alert popup')"&gt;Show Message&lt;/button&gt;
+</p>
+    <h3>OUTPUT</h3>
+    <button onclick="alert('This is a JavaScript alert pop up')">Show Message</button>
+    <script>
+    hr();
+    let element;
+    print("h3", "EVENT EXPRESSION SYNTAX");
+    print("pre", `
+    element.event = function() {
+      statements;
+    }
+    or
+    element.event = functionName;
+    `);
+    print("h3", "EXAMPLE");
+    print("pre", `
+    element = document.getElementById("1");
+    element.onclick = function() {
+        alert("Kira and lacus is a best couple in the fiction world");
+    }
+    
+    const show = function() {
+        alert("Hi guys! I love you so much :)");
+    }
+    
+    element = document.getElementById("2");
+    element.onclick = show;
+    `);
+    </script>
+    <button id="1">Open Message 1</button>
+    <button id="2">Greet</button>
+    <script>
+    element = document.getElementById("1");
+    element.onclick = function() {
+        alert("Kira and lacus is a best couple in the fiction world");
+    }
+    
+    const show = function() {
+        alert("Hi guys! I love you so much :)");
+    }
+    
+    element = document.getElementById("2");
+    element.onclick = show;
+    hr();
+    </script>
+    <script>
+    print("h3", "EVENT LISTENER SYNTAX");
+    print("pre", `
+    element.addEventListener("event", function() {
+      statements;
+    });
+    or
+    element.addEventListener("event", functionName);
+    
+    element.removeEventListener("event", functionName);
+    `);
+    print("h3", "EXAMPLE");
+    print("pre", `
+    element = document.getElementById("3");
+    element.addEventListener("click", function() {
+      alert("Dear player, please delete your account now!");
+    });
+    
+    element = document.getElementById("4");
+    element.addEventListener("click", show);
+    
+    function deleteGreet() {
+        button = document.getElementById("4");
+        button.removeEventListener("click", show);
+    }
+    
+    element = document.getElementById("5");
+    element.addEventListener("click", deleteGreet);
+    `);
+    </script>
+    <button id="3">Open Message 2</button>
+    <button id="4">Greet</button>
+    <button id="5">Delete Greet Alert</button>
+    <script>
+    element = document.getElementById("3");
+    element.addEventListener("click", function() {
+      alert("Dear player, please delete your account now!");
+    });
+    
+    element = document.getElementById("4");
+    element.addEventListener("click", show);
+    
+    function deleteGreet() {
+        button = document.getElementById("4");
+        button.removeEventListener("click", show);
+    }
+    
+    element = document.getElementById("5");
+    element.addEventListener("click", deleteGreet);
+    hr();
+    
+    print("h3", "EVENT BUBBLING & CAPTURING SYNTAX");
+    print("h3", "ONCE OPTION");
+    
+    print("h3", "EVENT OBJECT SYNTAX");
+    print("pre", `
+    Element.eventListener("event", function(e) {
+      statements;
+    }
+    `);
+    print("h3", "EXAMPLE");
+    print("pre", `
+    let bool = false;
+    element = document.getElementById("6");
+    element.addEventListener("click", function(event) {
+        if(!bool) {
+            print("p", \`Event: \${event}\`);
+            print("p", \`Event Type: \${event.type}\`);
+            print("p", \`Event Target: \${event.target}\`);
+            bool = true;
+        }
+    });
+    `);
+    </script>
+    <button id="6">Show Event Objects</button>
+    <script>
+    let bool = false;
+    element = document.getElementById("6");
+    element.addEventListener("click", function(event) {
+        if(!bool) {
+            print("p", `Event: ${event}`);
+            print("p", `Event Type: ${event.type}`);
+            print("p", `Event Target: ${event.target}`);
+            bool = true;
+        }
+    });
+    </script>
+</body>
+</html>

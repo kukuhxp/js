@@ -1,132 +1,193 @@
-# String Types
+# STRING TYPES
 
 First, you can declare a string using the primitive type, and second, you can declare a string by creating an object (reference type).
 
-# Static Methods
-## 1. String.raw()
 
-- **Parameters:** Strings, Sub N
-- **Return Value:** String
+# STATIC METHODS
 
+## raw()
 
-# Instance Properties
-## 1. constructor
+**Parameters:** Strings, Sub N
 
-- **Prototype Object:** String.prototype.constructor
-- **Status:** Writable
-- **Value:** Object
+**Return Value:** String
 
 
-# Instance Methods
-## 1. charAt()
+# INSTANCE PROPERTIES
 
-- **Prototype Object:** String.prototype.charAt()
-- **Parameters:** Index
-- **Return Type:** String
+## constructor
 
+**Prototype Object:** String.prototype.constructor
 
-## 2. concat()
+**Status:** Writable
 
-- **Prototype Object:**  String.prototype.concat()
-- **Parameters:** Object, String, Number
-- **Return Type:** String
+**Value:** Object
 
 
-## 3. endsWith()
+# INSTANCE METHODS
 
-- **Prototype Object:** String.prototype.endsWith
-- **Parameters:** String
-- **Return Type:** Boolean 
+## charAt()
 
+**Prototype Object:** String.prototype.charAt()
 
-## 4. String.prototype.includes()
+**Parameters:** Index
 
-- **Parameters:** String
-- **Return Type:** Boolean
+**Return Type:** String
 
 
-## 5. String.prototype.indexOf()
+## concat()
 
-- **Parameters:** String
-- **Return Type:** Number
+**Prototype Object:**  String.prototype.concat()
 
+**Parameters:** Object, String, Number
 
-## 6. String.prototype.lastIndexOf()
-
-- **Parameters:** String
-- **Return Type:** Number
+**Return Type:** String
 
 
-## 7. String.prototype.repeat()
+## endsWith()
 
-- **Parameters:** Numbers
-- **Return Type:** String
+**Prototype Object:** String.prototype.endsWith()
+
+**Parameters:** String
+
+**Return Type:** Boolean 
 
 
-## 8. String.prototype.replace()
+## includes()
 
-- **Parameters:** Old String/RegEx, New String
-- **Return Type:** String
+**Prototype Object:** String.prototype.includes
 
-> ## Example:
-> ### `string.replace("Some", "Replaced");`
-> - To avoid case sensitive of replace() method use the RegEx flag.
-> ### `string.replace(/SOME/i, "Replaced");`
-> - Using the insensitve flag
-> ### `string.replace(/some/g, "Replaced");`
-> - Using the global match flag
+**Parameters:** String
 
-## 9. String.prototype.search()
+**Return Type:** Boolean
 
-- **Parameters:** Regex
-- **Return Type:** Numbers
 
-## 10. String.prototype.slice()
+## indexOf()
 
-- **Parameters:** Start, End
-- **Return Type:** String
+**Prototype Object:** String.prototype.indexOf
 
-## 11. String.prototype.split()
+**Parameters:** String
 
-- **Parameters:** Separator/Whitespace, Limit
-- **Return Type:** Array of Strings
+**Return Type:** Number
 
-## 12. String.prototype.startsWith()
 
-- **Parameters:** String
-- **Return Type:** Boolean 
+## lastIndexOf()
 
-## 13. String.prototype.substring()
+**Prototype Object:** String.prototype.lastIndexOf
 
-- **Parameters:** Start, End
-- **Return Type:** String
+**Parameters:** String
 
-> ## Example:
-> ### `string.substring(-5, 3);`
-> - The return is \"Java\"
-> - If the one of index is negative, the index becomes zero (0)
-> - If the end index is negative, it swapped to start index
+**Return Type:** Number
 
-> ### `string.substring(3, -5);`
-> - The return is "Jav"
-> - If the start index > end index, the stringg is reversed
-> - (3, -5) equivalent to (0, 3)
 
-## 14. String.prototype.toLowerCase()	
+## repeat()
 
-- **Parameters:** None
-- **Return Type:** String
+**Prototype Object:** String.prototype.repeat
 
-## 15. String.prototype.toString()
+**Parameters:** Numbers
 
-- **Parameters:** None
-- **Return Type:** String
+**Return Type:** String
 
-## 16. String.prototype.toUpperCase()
 
-- **Parameters:** None
-- **Return Type:** String
+## replace()
 
-## 17. String.prototype.trim()
-- **Parameters:** None
-- **Return Type:** String
+**Prototype Object:** String.prototype.replace
+
+**Parameters:** Old String/RegEx, New String
+
+**Return Type:** String
+
+**Example:**
+
+To avoid case sensitive of replace() method, use the RegExp flag.
+
+`string.replace("Some", "Replaced");`
+
+Using the insensitive flag of RegExp
+
+`string.replace(/SOME/i, "Replaced");`
+
+Using the global match flag of RegExp
+
+`string.replace(/some/g, "Replaced");`
+
+## search()
+
+**Prototype Object:** String.prototype.search
+
+**Parameters:** Regex
+
+**Return Type:** Numbers
+
+## slice()
+
+**Prototype Object:** String.prototype.slice
+
+**Parameters:** Start, End
+
+**Return Type:** String
+
+## split()
+
+**Prototype Object:** String.prototype.split
+
+**Parameters:** Separator/Whitespace, Limit
+
+**Return Type:** Array of Strings
+
+## startsWith()
+
+**Prototype Object:** String.prototype.startsWith
+
+**Parameters:** String
+
+**Return Type:** Boolean 
+
+## substring()
+
+**Prototype Object:** String.prototype.substring
+
+**Parameters:** Start, End
+
+**Return Type:** String
+
+**Example:**
+
+If the one of index is negative, the index becomes zero (0). If the end index is negative, it swapped to start index
+
+`string.substring(-5, 3);`
+
+If the start index > end index, the string is reversed. (3, -5) equivalent to (0, 3)
+
+`string.substring(3, -5);`
+
+## toLowerCase()	
+
+**Prototype Object:** String.prototype.toLowerCase
+
+**Parameters:** None
+
+**Return Type:** String
+
+## toString()
+
+**Prototype Object:** String.prototype.toString
+
+**Parameters:** None
+
+**Return Type:** String
+
+## toUpperCase()
+
+**Prototype Object:** String.prototype.toUpperCase
+
+**Parameters:** None
+
+**Return Type:** String
+
+## trim()
+
+**Prototype Object:** String.prototype.trim
+
+**Parameters:** None
+
+**Return Type:** String
