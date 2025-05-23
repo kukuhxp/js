@@ -2,40 +2,32 @@
 <html>
 <head>
     <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-    <title>Arrays Instance Methods</title>
+    <title>Array Manipulation</title>
     <link href="../_css/style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
 </head>
 <body></body>
 <script src="../_libs/script.js"></script>
 <script>
-print("h3", "PROTOTYPE OBJECT");
-print("p", "Array.prototype");
-
-print("h3", "ARRAY DECLARATION");
+print("h1", "ARRAY MANIPULATION");
+print("h2", "Array Declaration");
 const fruits = ["Banana", "Grape", "Orange", "Melon"]
 print("p", `fruits = [${fruits.join(", ")}]`);
 for(let i in fruits) {
     print("span", `[${i}]: ${fruits[i]}`);
     if(i < fruits.length - 1) print("span", ", ");
 }
-
 let fruitsRev = [ ]
-
 const randNumber = [10, 3, 22, 120, 314, 5]
 print("p", `randNumber = ${randNumber.join(", ")}`);
-
 const number = [1, 2, 3, 4, 5, 6]
 print("p", `number = ${number.join(", ")}`);
-
 const numbers = [[1, 2], [3, 4], [5, 6]];
 print("p", `numbers = ${JSON.stringify(numbers).replace(/,/g, ', ')}`);
-
 const japanCars = ["Toyota", "Honda", "Mazda"]
 print("p", `japanCars = [${japanCars.join(", ")}]`);
-
 const germanCars = ["BMW", "Porsche", "Volkswagen"]
 print("p", `germanCars = [${germanCars.join(", ")}]`);
-
 const italyCars = ["Ferrari", "Lamborghini"]
 print("p", `italyCars = [${italyCars.join(", ")}]`);
 
@@ -91,27 +83,17 @@ const instanceMethods = [
   `fruitsRev = fruits.toReversed(): ${fruitsRev = fruits.toReversed()}`,
 ]
 
-
-  /*  COMMENTS BLOCK
-   *  array.copyWithin(target, start, end)
-   *  target: the position of copied index is placed
-   *  start (optional): the start of copied part, the default is 0
-   *  end (optional): the end of copied part, the default is array.length
-   *
-   *  array.flatMap(callback(currentValue[, index[, array]])[, thisArg])
-  */
-
-print("h3", "ARRAY INSTANCE METHODS LENGTH");
+print("h2", "Array Instance Methods Length");
 print("p", `Instance methods count: ${instanceMethods.length}`);
 
 for(let i in instanceMethods) {
-    if(i == 0) print("h3", "ARRAY EXTRACTION");
-    if(i == 2) print("h3", "ARRAY ADDITION");
-    if(i == 13  ) print("h3", "ARRAY DELETION");
-    if(i == 25) print("h3", "ARRAY DUPLICATION");
-    if(i == 26) print("h3", "ARRAY CONCATENATION");
-    if(i == 29) print("h3", "ARRAY SEARCH");
-    if(i == 36) print("h3", "ARRAY SORT");
+    if(i == 0) print("h2", "Array Extraction");
+    if(i == 2) print("h2", "Array Addition");
+    if(i == 13  ) print("h2", "Array Deletion");
+    if(i == 25) print("h2", "Array Duplication");
+    if(i == 26) print("h2", "Array Concatenation");
+    if(i == 29) print("h2", "Array Search");
+    if(i == 36) print("h2", "Array Sort");
     print("p", `${instanceMethods[i]}`);
 }
 </script>

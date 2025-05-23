@@ -1,18 +1,24 @@
 const body = document.body;
-function print(tag, txt) {
-        // If tag == falsy
-        if(!tag) {
-            body.append(txt);
-            return body;
-        }
-        const element = document.createElement(tag);
-        const text = document.createTextNode(txt);
-        element.append(text);
-        // body.append(element.append(text));
-        // body.append(undefined)
-        body.append(element);
+
+function print(tag, txt, attrs = {}) {
+    if (!tag) {
+        body.append(txt);
         return body;
     }
+
+    const element = document.createElement(tag);
+    const text = document.createTextNode(txt);
+    element.append(text);
+    for (const [key, value] of Object.entries(attrs)) {
+        if (key.startsWith("on") && typeof value === "function") {
+            element.addEventListener(key.slice(2), value);
+        } else {
+            element.setAttribute(key, value);
+        }
+    }
+    body.append(element);
+    return body;
+}
   
 function br(times = 1) {
         const frag = document.createDocumentFragment();

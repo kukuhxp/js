@@ -8,15 +8,8 @@
 <body></body>
 <script src="../_libs/script.js"></script>
 <script>
-print("h3", "FUNCTION DECLARATION SYNTAX");
-print("pre", `
-function name(parameter, parameter n) {
-  statements;
-}
-`);
-print("p", "variable = function (parameters) { } // Function literal");
-
-print("h3", "EXAMPLE");
+print("h1", "FUNCTION");
+print("h2", "Function Declaration");
 print("pre", `
 function add(a, b) {
     let c = a + b;
@@ -28,246 +21,107 @@ function add(a, b) {
     let c = a + b;
     return c;
 };
+hr();
 
-print("h3", "INVOCATION");
+print("h2", "Invocation");
 print("p", `add(10, 2): ${add(10, 2)}`);
+hr();
 
-print("h3", "FUNCTION AS VALUE");
-print("p", `x = add(33, 18): ${add(33, 18)}`);
+print("h2", "Function as Value");
+print("b", "Example:");
+print("p", `x = add(33, 18)`);
 let x = add(33, 18);
-print("p", `100 + x = ${100 + x}`);
+print("p", `100 + x =...`);
+print("b", "Output:");
+print("p", `${add(33, 18)}`);
+print("p", `${100 + x}`);
 hr();
 
-print("h3", "FUNCTION CONSTRUCTOR SYNTAX");
-print("pre", `
-variable = new Function(args, return); 
-`);
-hr();
-
-print("h3", "NAMED FUNCTION EXPRESSION (NFE) SYNTAX");
-print("pre", `
-variable = function name (parameter, parameter n) {
-    statements;
-}
-`);
-
-print("h3", "EXAMPLE");
+print("h2", "Named Function Expression (NFE)");
+print("b", "Example:");
 print("pre", `
 const factorial = function fact(n) {
   return n <= 1 ? 1 : n * fact(n - 1);
 }
 `);
-
 const factorial = function fact(n) {
   return n <= 1 ? 1 : n * fact(n - 1);
 }
-
-print("p", `factorial(5): ${factorial(5)}`);
+print("p", `factorial(5)`);
+print("b", "Output:");
+print("p", `${factorial(5)}`);
 hr();
 
-print("h3", "ANONYMOUS FUNCTION EXPRESSION SYNTAX");
-print("pre", `                                                                                  
-variable = function (parameter, parameter n) {
-    statements;
-}
-`);
-
-print("h3", "EXAMPLE");
+print("h2", "Anonymous Function Expression");
+print("b", "Example:");
 print("pre", `                                                                
 const sub = function(a, b) {
     let c = a - b;
     return c;
 }
 `);
-
 const sub = function(a, b) {
     let c = a - b;
     return c;
 };
-
-print("p", `sub(24, 17): ${sub(24, 17)}`);
+print("p", "sub(24, 17)");
+print("b", "Output:");
+print("p", `${sub(24, 17)}`);
 hr();
 
-print("h3", "ARROW FUNCTION EXPRESSION SYNTAX");
-print("pre", `
-variable = (parameter, parameter n) => {
-    statements;
-}
-or
-`);
-print("p", "variable = parameter => statement:");
-
-print("h3", "EXAMPLE");
+print("h2", "Arrow Function");
+print("b", "Example:");
 print("pre", `
 const divide = (a, b) => {
     let c = a / b;
     return c;
 }
 `);
-
 const divide = (a, b) => {
     let c = a / b;
     return c;
 };
-
-print("p", `divide(24, 5): ${divide(24, 5)}`);
+print("p", `divide(24, 5)`);
+print("b", "Output:");
+print("p", `${divide(24, 5)}`);
 hr();
 
-print("h3", "NAMED CALLBACK FUNCTION SYNTAX");
-print("pre", `
-function nameFunction(cbFunc) {
-  statements;
-  cbFunc();
-}
-
-function callback() {
-  statements;
-}
-
-nameFunction(callback);
-`);
-
-print("h3", "EXAMPLE");
-print("pre", `
-function phoneNumber(code, callback) {
-    callback();
-    return code + " (555) 555-1234";
-}
-
-function say() {
-    print("span", "My phone number is ");
-}
-`);
-
-function phoneNumber(code, callback) {
-    callback();
-    return code + " (555) 555-1234";
-}
-
-function say() {
-    print("span", "My phone number is ");
-}
-
-print("span", `phoneNumber("+1", say): `);
-print("span", `${phoneNumber("+1", say)}`);
-hr();
-
-print("h3", "ANONYMOUS CALLBACK FUNCTION SYNTAX");
-print("pre", `
-function name(parameter, callback) {
-  callback();
-  statements;
-  callback();
-}
-
-name(argument, function() {
-  statements;
-});
-`);
-
-print("h3", "EXAMPLE");
-print("pre", `
-function greet(name, callback) {
-    print("p", \`Hello my name is \${name}\`);
-    callback();
-}
-`);
-
-function greet(name, callback) {
-    print("p", `Hello my name is ${name}`);
-    callback();
-}
-
-print("pre", `
-greet("John", function() {
-    print("p", "Nice to meet you!");
-});
-`);
-
-print("h3", "OUTPUT");
-greet("John", function() {
-    print("p", "Nice to meet you!");
-});
-hr();
-
-print("h3", "Immediately Invoked Function Expression (IIFE) SYNTAX");
-print("pre", `
-(function(parameter, parameter n) {
-  statements;
-})();
-or
-(() => {
-  statements
-})()
-`);
-
-print("h3", "EXAMPLE");
+print("h2", "Immediately Invoked Function Expression (IIFE)");
+print("b", "Example");
 print("pre", `
 (function() {
     print("p", "IIFE is running...")
 })();
 `);
-
+print("b", "Output:");
 (function() {
     print("p", "IIFE is running...")
 })();
-
 hr();
 
-print("h3", "GENERATOR FUNCTION SYNTAX");
-print("pre", `
-function* nameFunction(parameter, parameter n) {
-  yield value;
-}
-
-variable = nameFunction();
-object.next();
-`);
-
-print("h3", "EXAMPLE");
+print("h2", "Generator Function");
+print("b", "Example:");
 print("pre", `
 function* greet() {
   yield "Hi";
   yield "Nice to meet you!";
   return "Welcome";
 }
-
 const gen = greet();
 print("p", \`\${JSON.stringify(gen.next())}\`);
 print("p", \`\${JSON.stringify(gen.next())}\`);
 print("p", \`\${JSON.stringify(gen.next())}\`);
 `);
-
-print("h3", "OUTPUT");
-
+print("b", "Output:");
 function* greet() {
   yield "Hi";
   yield "Nice to meet you!";
   return "Welcome";
 }
-
 const gen = greet();
 print("p", `${JSON.stringify(gen.next())}`);
 print("p", `${JSON.stringify(gen.next())}`);
 print("p", `${JSON.stringify(gen.next())}`);
 hr();
-
-print("h3", "ASYNCHRONOUS CALLBACK FUNCTION SYNTAX");
-print("pre", `
-asynchronousFunction(function() {
-  pending statements;
-}
-`);
-
-print("h3", "EXAMPLE");
-print("pre", `
-setTimeout(function() {
-  print("p", "Hello World!");
-}, 2000);
-`);
-
-setTimeout(function() {
-  print("p", "Hello World!");
-}, 2000);
 </script>
 </html>

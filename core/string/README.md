@@ -191,3 +191,34 @@ If the start index > end index, the string is reversed. (3, -5) equivalent to (0
 **Parameters:** None
 
 **Return Type:** String
+
+
+# CONCEPTS
+
+## String Literal
+
+**Type:** Single Quote (''), Double Quote (""), Back Tick (``)
+
+## Template Literal
+
+**String Literal:** Back Tick (``)
+
+**Features:** Interpolation, Multiple-line
+
+## HTML Literal
+
+**DOM Properties**: `innerHTML, outerHTML`
+
+**DOM Method:** `insertAdjacentHTML()`
+
+## Char Literal
+
+## String Concatenation
+
+**Implicit:** String + Number, String + Object, String + String
+
+**Explicit:** `String.concat()`
+
+## Falsy String
+
+**Value:** `"", ''`

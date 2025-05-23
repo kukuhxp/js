@@ -1,12 +1,12 @@
 # DOCUMENT INTERFACE		
 
-## Constructor
+# CONSTRUCTOR
 
-### Document()
+## Document()
 
-## Instance Class
+# INSTANCE CLASS
 
-### document
+## document
 
 # INSTANCE PROPERTIES
 
@@ -64,7 +64,9 @@
 
 **Status:** Writable
 
-**Value:** String
+**Return Type:** String
+
+**Value:** Title of Document
 
 **Syntax:** document.title
 
@@ -72,7 +74,9 @@
 
 **Status:** Writable
 
-**Value:** Element Node
+**Return Type:** Element Node
+
+**Value:** Body Element
 
 **Syntax:** document.body
 
@@ -80,7 +84,9 @@
 
 **Status:** Read-only
 
-**Value:** HTML Collection
+**Return Type:** HTML Collection
+
+**Value:** Form Element Collection
 
 **Syntax:** document.forms
 

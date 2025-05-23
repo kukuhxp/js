@@ -1,13 +1,18 @@
 body {
-  font-family: monospace;
-  font-size: 13px;
   line-height: 1.5;
   padding: 10px;
   box-sizing: border-box;
   background-color: #eee;
 }
 
-pre { margin-top: -17px; }
+h1, h2 {font-family: 'Oswald', sans-serif;}
+
+p, span{font-family: monospace;}
+
+pre {
+  font-family: monospace;
+  margin-top: -17px;
+}
 
 code {
   font-weight: bold;
@@ -16,3 +21,5 @@ code {
   padding: 0 5px;
   background-color: #dbdbdb;
 }
+
+b + pre {margin-top: 1px;}

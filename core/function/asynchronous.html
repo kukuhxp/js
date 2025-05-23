@@ -8,19 +8,37 @@
 <body></body>
 <script src="../_libs/script.js"></script>
 <script>
-print("h3", "ASYNC FUNCTION");
+print("h1", "ASYNCHRONOUS");
+print("h2", "async/await");
+print("b", "Example:");
+print("pre", `
 async function processing() {
   print("p", "1. Start");
-
   await new Promise(resolve => setTimeout(resolve, 2000));
-  
   print("p", "3. FINISH!");
 }
-
 processing();
 print("p", "2. Running...");
+`);
+print("b", "Output:");
+async function processing() {
+  print("p", "1. Start");
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  print("p", "3. FINISH!");
+}
+processing();
+print("p", "2. Running...");
+hr()
 
-print("h3", "ASYNCHRONOUS FUNCTION");
+print("h2", "setTimeout()");
+print("b", "Example:");
+print("pre", `
+print("p", "Ready");
+setTimeout(function() {
+    print("p", "Processing...");
+}, 2000);
+`);
+print("b", "Output:");
 print("p", "Ready");
 setTimeout(function() {
     print("p", "Processing...");

@@ -2,21 +2,13 @@
 <head>
     <title>JavaScript Built-in Objects</title>
     <link href="../_css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
 </head>
-	<body id="dom">
-	    <h3>JavaScript Built-in Objects</h3>
-	    <p>JavaScript</p>
-	    <p>Some text</p>
-	</body>
+	<body></body>
 <script src="../_libs/script.js"></script>
 	<script>
-	const js = [
-    ["String", "Some text"],
-    ["Number",10],
-    ["Boolean", true],
-    ["Boolean", false],
-    ["Null", null],
-    ["Undefinied", undefined],
+print("h1", "BUILT-IN OBJECTS");
+	const objects = [
     ["Math", Math],
     ["Date", Date],
     ["Date()", Date()],
@@ -31,13 +23,17 @@
     ["Number(100)", Number(100)],
     ["new Number(100)", new Number(100)],
     ["Boolean", Boolean],
-    ["Boolean(1)", Boolean(1)],
-    ["new Boolean(1)", new String(1)],
+    ["Boolean(0)", Boolean(0)],
+    ["new Boolean(1)", new Boolean(1)],
 	];
 
-for (let [label, val] of js) {
-    print("p", `${label} → type: ${typeof val} → value: ${val}`);
+for (let [label, val] of objects) {
+    print("h2", `${label} `);
+    print("b", "type: ");
+    print("span", `${typeof val} `);
+    print("b", " → value: ");
+    print("span", `${val}`);
+    br();
 }
-
 	</script>	
 </html>
