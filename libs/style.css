@@ -5,9 +5,14 @@ body {
   background-color: #eee;
 }
 
-h1, h2 {font-family: 'Oswald', sans-serif;}
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+}
 
-p, span{font-family: monospace;}
+p,
+span{
+  font-family: monospace;
+}
 
 pre {
   font-family: monospace;
@@ -22,4 +27,6 @@ code {
   background-color: #dbdbdb;
 }
 
-b + pre {margin-top: 1px;}
+b + pre {
+  margin-top: 1px;
+}
